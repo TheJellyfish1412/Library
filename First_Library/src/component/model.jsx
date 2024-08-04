@@ -64,7 +64,7 @@ export default function Modal({ showModal, setShowModal }) {
     formData.append('price', Price);
     formData.append('tags', Tags);
     try {
-      const response = await axios.post('http://localhost:3000/searchBooks', formData, {
+      const response = await axios.post('http://localhost:3000/addBook', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

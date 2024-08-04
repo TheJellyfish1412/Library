@@ -100,7 +100,7 @@ app.post("/addBook", upload.single('imgName'), async (req, res) => {
   }
 });
 
-app.get("/deleteBook",async (req, res) => {
+app.get("/deleteBook", async (req, res) => {
   const { id } = req.query;
   const books = client.db("website1").collection("books");
   const query = { _id: new ObjectId(id)};
@@ -163,9 +163,9 @@ app.get('/images/:name', (req, res) => {
   });
 });
 
-app.get("*", (req, res) => {
-  res.status(404).send('Not Found');
-});
+// app.get("*", (req, res) => {
+//   res.status(404).send('Not Found');
+// });
 
 
 app.listen(3000, () => {
